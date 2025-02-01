@@ -1,0 +1,267 @@
+.accept-button {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 700;
+  border: 2px solid var(--dark-color);
+  background: var(--success-color);
+}
+
+.accept-button:hover {
+  cursor: pointer;
+  border: 2px solid var(--success-color);
+  box-shadow: 0 0 0.5rem var(--success-color);
+}
+
+.back {
+  color: var(--primary-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
+
+.back:hover,
+.back:focus {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.checkbox {
+  margin: 0.5rem;
+}
+
+.close {
+  color: var(--primary-color);
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.friend-badge {
+  color: var(--success-color);
+  margin-left: 0.5rem;
+}
+
+.friend-request-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.friend-request-sender {
+  align-items: center;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.loser-gif-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 50vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.loser-gif {
+  background: url('/static/images/loser.gif') no-repeat center center;
+  background-size: contain; /* Ensure the image scales properly */
+  width: 80vw; /* One-third of the viewport width */
+  height: 80vw; /* Maintain aspect ratio */
+}
+
+.message {
+  display: flex;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  color: var(--failure-color);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(32, 60, 102, 0.829); /*  background  */
+}
+
+.modal-content {
+  /* background-color: white; */
+  /* margin: 15% auto; 15% from the top and centered */
+  margin: calc(5vw) calc(5vw);
+  padding: 20px;
+  /* border: 1px solid #888; */
+  width: 80%; /* Could be more or less depending on screen size */
+}
+
+.modal-content-box {
+  background-color: var(--background-color);
+  /* margin: 15% auto; 15% from the top and centered */
+  margin: calc(5vw) calc(5vw);
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  width: 80%; /* Could be more or less depending on screen size */
+}
+
+.modal-forms {
+  display: none;
+  position: fixed;
+  z-index: 3; /* Sit on top but under the modal-game */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  margin-bottom: 0.5rem;
+}
+
+.profile-image-search {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.refresh {
+  color: var(--primary-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
+
+.refresh:hover,
+.refresh:focus {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.reject-button {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 700;
+  border: 2px solid var(--dark-color);
+  background: var(--failure-color);
+}
+
+.reject-button:hover {
+  cursor: pointer;
+  border: 2px solid var(--failure-color);
+  box-shadow: 0 0 0.5rem var(--failure-color);
+}
+
+.select-button {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  border: 2px solid var(--primary-color);
+  background: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.select-button:hover {
+  color: var(--dark-color);
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.selected-button {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--primary-color);
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+  background: var(--primary-color);
+  /* cursor: pointer; */
+}
+
+.search-results {
+  color: var(--primary-color);
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 25%;
+  margin: 0 auto;
+}
+
+.username-div {
+  display: flex;
+  align-items: center;
+}
+
+.username-search {
+  margin-right: 0.5rem;
+}
+
+.user-view-container {
+  display: flex;
+}
+
+/* .user-view-left {
+} */
+
+.user-view-right {
+  position: relative;
+  left: 2rem;
+  top: 2rem;
+}
+
+/* Match History Page */
+
+.match-history {
+  max-height: 70vh;
+  /* justify-content: space-between; */
+  margin-bottom: 0.5rem;
+  overflow-y: auto;
+}
+
+.match-result {
+  /* display: flex; */
+  border: 2px solid var(--primary-color);
+}
+
+.match-game-id {
+  color: var(--primary-color);
+}
+
+.match-date {
+  color: var(--secondary-color);
+}
+
+.match-scores {
+  display: flex;
+}
+
+.match-score {
+  color: var(--tertiary-color);
+  margin-right: 0.5rem;
+}

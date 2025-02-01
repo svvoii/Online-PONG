@@ -1,0 +1,117 @@
+.chat {
+  position: fixed;
+  right: 2rem;
+  bottom: calc(var(--footer-height) / 2);
+  background-color: var(--background-color);
+  z-index: 8;
+  border: 2px solid var(--primary-color);
+  color: var(--tertiary-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transform: translate(50%, 50%);
+}
+
+.chat-box-closed {
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.chat-box-opened {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  max-width: 100vw;
+  overflow-wrap: break-word;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: var(--background-color);
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: var(--background-color);
+  color: var(--background-color);
+}
+
+.chat-input-field {
+  margin-bottom: 0rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.chat-title {
+  margin-right: 0.5rem;
+}
+
+.chat-invite-button {
+  border: 2px solid var(--tertiary-color);
+  background-color: var(--background-color);
+  color: var(--tertiary-color);
+  padding: 0.25rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.chat-invite-button:hover { 
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.chat-message-you {
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.chat-message-system {
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
+.chat-message-other {
+  color: var(--secondary-color);
+}
+
+.close-chat {
+  color: var(--background-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-chat:hover,
+.close-chat:focus {
+  color: var(--secondary-color);
+  cursor: pointer;
+}

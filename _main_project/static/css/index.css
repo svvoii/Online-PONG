@@ -1,0 +1,391 @@
+:root {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  /* font-color: #eeeeee; */
+  --primary-color: #58ffec;
+  --secondary-color: #fc0892;
+  --tertiary-color: #f1d2ee;
+  --background-color: #040847;
+  --plane-text-color: #ffffff;
+  --dark-color: rgb(30, 23, 66);
+  --success-color: #89ff89;
+  --failure-color: var(--secondary-color);
+  /* scrollbar-color: var(--primary-color) var(--secondary-color); */
+  font-size: clamp(18px, 3vw, 30px);
+  --nav-height: 80px;
+  --nav-button-height: calc(var(--nav-height) - 30px);
+  --footer-height: calc(var(--nav-height) / 2);
+  --app-height: calc(100vh - (calc(var(--nav-height)) + var(--footer-height)));
+}
+
+/* enables scrolling in text screens like TOS and privacy policy */
+html, body {
+  overflow: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  background-color: var(--background-color);
+  mask-image: linear-gradient(to bottom, #0005 50%, #000000 50%); 
+  /* mask-size: 100% 0.5px; */
+  mask-size: 100% 2px;
+  text-shadow: 0 0 0.5rem;
+}
+
+div.retro-container {
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  padding: 0.5rem;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  /* mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px;
+  text-shadow: 0 0 0.5rem; */
+}
+
+main {
+  overflow: hidden;
+}
+
+section {
+  height: 100%;
+  overflow: hidden auto;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a[class="about_us"] {
+  color: var(--primary-color);
+}
+
+a[type="alt-signin"] {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--primary-color);
+  background: var(--dark-color);
+  border-radius: 4px;
+  width: fit-content;
+}
+
+a[type="alt-signin"]:hover {
+  color: var(--dark-color);
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-shadow: 0 0 0.5rem;
+}
+
+button[type=select] {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  border: 2px solid var(--primary-color);
+  background: var(--dark-color);
+  border-radius: 4px;
+}
+
+button[type=select]:hover {
+  color: var(--dark-color);
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+button[type=game-select] {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  border: 2px solid var(--primary-color);
+  background: var(--dark-color);
+  border-radius: 4px;
+}
+
+button[type=game-select]:hover {
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+button[type=submit] {
+  display: block;
+  padding: 12px 18px;
+  color: var(--secondary-color);
+  background-color: var(--dark-color);
+  border: 2px solid var(--secondary-color);
+  font-weight: 700;
+  /* cursor: pointer; */
+  font-family: var(--font-family);
+  font-size: large;
+  border-color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  /* mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px;
+  text-shadow: 0 0 0.5rem; */
+  border-radius: 4px;
+}
+
+button[type=submit]:hover {
+  cursor: pointer;
+  background: var(--secondary-color);
+  color: var(--plane-text-color);
+
+  /* mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px;
+  text-shadow: 0 0 0.5rem; */
+}
+
+p, h1, h2, li {
+  color: var(--primary-color); 
+  /* mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px; 
+  text-shadow: 0 0 0.5rem; */
+
+  /* color: rgb(234, 217, 245) ;
+  text-align: center;
+  letter-spacing: 0.033em;
+  text-shadow: -0.033em 0 1px rgba(255,0,0,0.67), 0.033em 0 1px rgba(0, 255, 255, 0.67); */
+}
+
+h3 {
+  color: var(--plane-text-color)
+}
+
+label {
+  color: var(--plane-text-color)
+}
+
+input {
+  background-color: var(--tertiary-color);
+  font-size: 1rem;
+  border: none;
+  color: (var(--primary-color));
+  font-family: var(--font-family);
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.start-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+.game-select-button {
+  margin-top: 0.5rem;
+}
+
+.game-select-button:hover
+{
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+	background: var(--primary-color) url('/static/images/pixel_button_blue.png') no-repeat center center;
+  background-size: cover;
+	transition-delay: 0.4s;
+	animation: animate 0.4s steps(8) forwards;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		background-position-y: 0;
+	}
+	100%
+	{
+		background-position-y: -480px;
+	}
+}
+
+.game-select-button-div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: 1rem 0;
+}
+
+.gif-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin-top: var(--nav-height);
+  height: var(--app-height);
+  background: url('/static/images/Synth-sunset-.webp') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.gif-container::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 0; /* Ensure the overlay is above the background image */
+}
+
+/* .view-content { */
+  /* position: relative; */
+  /* z-index: 1; */
+  /* margin-left: 1em; */
+  /* align-items: center;
+  justify-content: center; */
+/* } */
+
+.text-container {
+  position: relative;
+  width: 100%;
+  margin-top: var(--nav-height);
+  margin-bottom: var(--footer-height);
+  height: auto;
+  background-size: cover;
+}
+
+.oauth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  align-items: center;
+}
+
+.photos-container {
+  display: flex;
+  margin-bottom: var(--footer-height);
+}
+
+.profile-photo {
+  width: 25vw;
+  height: 25vw;
+  margin: 1rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px var(--primary-color);
+  cursor: pointer;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* #app {
+  margin: 2em;
+  margin-top: var(--nav-height); 
+  margin: var(--nav-height) 2em 2em 2em; top right bottom left
+} */
+
+.old-crt-monitor {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+    z-index: 999; /* Ensure the overlay is above everything */
+    height: 100vh;
+    width: 100vw;
+    box-shadow: inset 0px 0px 2rem;
+    background-image: linear-gradient(0deg, #0000 10%, #fff1 90%, #0000 100%);
+    animation: crtAnimation 100s linear infinite;
+    background-size: 100% 80%;
+}
+
+@keyframes crtAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 10000%;
+    }
+}
+
+.warning-message {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* style for game canvas */
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh;
+  overflow: auto; */
+  height: var(--app-height);
+}
+
+.board {
+  width: calc(var(--app-height) - 125px);
+  max-width: 600px;
+  height: auto;
+  max-height: 600px;
+	border: #58ffeccf 2px solid;
+}
+
+.game-buttons {
+    margin: 10px;
+}
+
+.game-button {
+  margin-right: 1rem;
+}
+
+/* * * * * * * * * * * * * * */
